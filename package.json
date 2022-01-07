@@ -20,6 +20,7 @@
   "homepage": "https://github.com/born3am/netflix-baby-yoda-api#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
   }
 }
