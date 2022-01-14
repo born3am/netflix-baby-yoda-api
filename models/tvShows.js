@@ -26,7 +26,7 @@
  */
 
 // action Tv Shows
-export const actionTvShows = [
+const actionTvShows = [
     {
         id: "12311",
         title: "Breaking Bad",
@@ -272,7 +272,7 @@ exports.actionTvShows = actionTvShows;
 
 // new Tv Shows
 
-export const newTvShows = [
+const newTvShows = [
     {
         id: "12311vvsdcdsc",
         title: "Arcane",
@@ -485,6 +485,5 @@ export const newTvShows = [
 exports.newTvShows = newTvShows;
 
 
-const tvShows = [...actionTvShows, ...newTvShows];
 
-exports.tvShows = tvShows;
+exports.tvShows = [...actionTvShows, ...newTvShows];;

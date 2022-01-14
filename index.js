@@ -4,6 +4,8 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000
 const { movies, actionMovies, newMovies, getMovie } = require('./controllers/movies')
+const { newTvShows, actionTvShows, tvShows, getTvShow, getTvShowEpisode, getShowSeason } = require('./controllers/tvShows')
+
 
 // 1) all movies route
 app.get("/movies", movies);
@@ -27,15 +29,21 @@ app.get("/movie/:id", getMovie);
 
 // 1) all tv shows
 
+app.get("/tv-shows", tvShows);
+
 // 2) action tv shows
+app.get("/action-tv-shows", actionTvShows);
 
 // 3) new tv shows
+app.get("/new-tv-shows", newTvShows);
 
 // 4) find tv shows by ID
+app.get("/tv-show/:tvShowId", getTvShow);
 
 // 5) find episode by ID => /:tvShowId/:seasonId/:episodeId
+app.get("/tv-show-episode/:tvShowId/:seasonId/:episodeId", getTvShowEpisode)
 
-
+app.get("/tv-show-season/:tvShowId/:seasonId", getShowSeason)
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
