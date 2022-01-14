@@ -24,6 +24,19 @@ app.get("/movie/:id", getMovie);
 //     res.send('TV-SHOWS')
 //   })
 
+
+// 1) all tv shows
+
+// 2) action tv shows
+
+// 3) new tv shows
+
+// 4) find tv shows by ID
+
+// 5) find episode by ID => /:tvShowId/:seasonId/:episodeId
+
+
+
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
 })
