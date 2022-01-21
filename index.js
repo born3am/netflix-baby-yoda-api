@@ -7,9 +7,7 @@ const port = process.env.PORT || 5000
 const { movies, actionMovies, newMovies, getMovie } = require('./controllers/movies')
 const { newTvShows, actionTvShows, tvShows, getTvShow, getTvShowEpisode, getShowSeason } = require('./controllers/tvShows')
 
-
 app.use(cors());
-
 
 // 1) all movies route
 app.get("/movies", movies);
